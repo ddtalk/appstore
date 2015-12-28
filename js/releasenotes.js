@@ -23,8 +23,8 @@
 		showDescription 			: true,
 		showComments 			: true,
 		// Used if phpApi is set to false
-	     	repo		            		: 'rails',
-	     	username       			: 'rails'
+	     	repo		            		: 'appstore',
+	     	username       			: 'ddtalk'
 	 };
 
     	$.fn.releaseNotes = function(settings){
