@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da60a1d7-cf3c-451a-82a6-da8408627baa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/releasenotes.js" afterPath="$PROJECT_DIR$/js/releasenotes.js" />
-    </list>
+    <list default="true" id="da60a1d7-cf3c-451a-82a6-da8408627baa" name="Default" comment="" />
     <ignored path="appstore.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +34,8 @@
       <file leaf-file-name="releasenotes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/releasenotes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07438017">
-              <caret line="21" column="34" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.75371903">
+              <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
               <folding>
                 <marker date="1451271748000" expanded="true" signature="6967:6998" placeholder="..." />
                 <marker date="1451271748000" expanded="false" signature="7086:7099" placeholder="..." />
@@ -225,8 +223,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/releasenotes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07438017">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.75371903">
+          <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
           <folding>
             <marker date="1451271748000" expanded="true" signature="6967:6998" placeholder="..." />
             <marker date="1451271748000" expanded="false" signature="7086:7099" placeholder="..." />
