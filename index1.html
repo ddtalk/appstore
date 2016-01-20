@@ -1,0 +1,500 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>钉钉demo</title> 
+
+</head>
+<!-- <script type="text/javascript" src="./dingtalk.js"></script> -->
+ <script src="http://g.alicdn.com/ilw/ding/0.6.8/scripts/dingtalk.js"></script>
+
+
+
+
+<script type="text/javascript"> 
+
+  
+// dd.ready(
+// 	function() {
+        // dd.biz.navigation.setTitle({
+        //     title: 'runtime3',
+        //     onSuccess: function(data) {
+        //         log.i('set title 3');
+        //     },
+        //     onFail: function(err) {
+        //         log.e(JSON.stringify(err));
+        //     }
+        // });
+// });
+
+function getAlert(var1) {
+	alert("fefff34"); 
+
+	var aaa = window.nuva.require('biz.navigation');
+	dd.biz.util.uploadImage({
+    multiple: false, //是否多选，默认false
+    max: 3, //最多可选个数
+    onSuccess : function(result) {
+        //onSuccess将在图片上传成功之后调用
+        /*
+        [
+          'http://gtms03.alicdn.com/tps/i3/TB1VF6uGFXXXXalaXXXmh5R_VXX-237-236.png'
+        ]
+        */
+        document.write(result);
+        log(JSON.stringify(result));
+    },
+    onFail : function(err) {
+    	alert(JSON.stringify(err));
+    }
+	});
+
+
+	// dd.biz.navigation.setIcon(
+	// {
+	// 	showIcon :true,
+	// 	iconIndex : 1,
+ //    onSuccess : function(data) {
+ //    	alert(JSON.stringify(data));
+ //    },
+ //    onFail : function(err) {
+ //    	    alert(JSON.stringify(err));
+
+ //    }
+	// });
+}
+
+
+// 	aaa.getUUID({
+//     onSuccess : function(data) {
+//     	// alert(JSON.stringify(data));
+        
+//         {
+//             uuid: '3udbhg98ddlljokkkl' //
+//         }
+        
+//     },
+//     onFail : function(err) {}
+// });
+	// var getAlert = window.nuva.require('biz.contact');//请求获得这个类
+	// var a = var1%2;
+	// var1 = var1/2;
+
+	// var b = var1%2;
+	// var1 = var1/2;
+
+	// var c = var1%2;
+	// var1 = var1/2;
+
+	// var d = var1%2;
+	// var1 = var1/2;
+
+	// var e = var1%2;
+
+	// getAlert.complexChoose({//4个参数，16种情景
+	// 	startWithDepartmentId: (a == 0) ? -1 : 0, //-1表示从自己所在部门开始, 0表示从企业最上层开始，其他数字表示从该部门开始
+	// 	selectedUsers:(b == 0) ? [] : ["1913079016","32135433950"], //预选用户
+	// 	disabledUsers:(c == 0) ? [] : ["55692"],
+	// 	selectedDepartments:(d == 0) ? [] : [
+	// 			{
+	// 				id:"140010",
+	// 				name:"钉钉PMO",
+	// 				number:107
+	// 			}
+
+	// 	],//预选部门
+	// 	disabledDepartments:(e == 0) ? [] : [
+	// 			{
+	// 				id:"142004",
+	// 				name:"网吧行业部",
+	// 				number:6
+
+	// 			}
+	// 	],//禁选部门
+	// 	corpId:'dingea786bf7dcce0e0c', //企业id
+	// 	onSuccess: function(data) {
+	// 		alert(JSON.stringify(data));
+	// 	},
+	// 	onFail: function(err) {
+	// 		alert(JSON.stringify(err));
+	// 	}
+	// });//为这个函数传入参数
+
+
+function getConfirm() {
+	alert("fefff34"); 
+
+	var getAlert = window.nuva.require('biz.contact');
+
+	getAlert.choose({//5个参数，32种情况
+		startWithDepartmentId: -2,
+		multiple: true, //是否多选： true多选 false单选； 默认true
+    	users: ["1913079016","32135433950"], //默认选中的用户列表，工号；成功回调中应包含该信息
+    	disabledUsers:["55692"],
+    	corpId: 'dingea786bf7dcce0e0c', //企业id
+    	max: 1500, //人数限制，当multiple为true才生效，可选范围1-1500
+
+		onSuccess: function(data) {
+			alert(JSON.stringify(data)); 
+		},
+		onFail: function(err) {
+			alert(JSON.stringify(err));
+		}
+	});
+}
+
+dd.ready(function() {
+	// setMenu();
+
+	// alert('dd ready');
+	// alert(window.WebViewJavascriptBridgeAndroid);
+});
+
+//choose使用场景：1.审批选择审批人 2.签到查看他人签到。
+
+//complexChoose使用场景：1.发公告选人；
+
+
+
+//pickConversation使用场景：1.发送日志选择聊天窗口 
+
+function getPrompt() {
+	var getAlert = window.nuva.require('biz.chat');
+	getAlert.pickConversation({
+   		"corpId":"dingea786bf7dcce0e0c",
+   		"isConfirm":true,
+
+		onSuccess: function(data) {
+			alert(JSON.stringify(data));
+
+		},
+		onFail: function(err) {
+			alert(JSON.stringify(err));
+		}
+	});
+}
+function foo(){
+		 window.setInterval(pp,500);
+	
+}
+var ss=0;
+function pp(){
+	console.log("yinyien123" + (ss++));
+
+}
+function setMenu() {
+var getmenu = window.nuva.require('biz.navigation');
+
+	dd.biz.navigation.setMenu({
+		backgroundColor : "#ADD8E6",
+		items : [
+			{
+				id:"1",//字符串
+			// "iconId":"file",//字符串，图标命名
+			  text:"帮助"
+			}
+			,
+			{
+				"id":"2",
+			"iconId":"photo",
+			  "text":"我们"
+			}
+			,
+			{
+				"id":"3",
+			"iconId":"file",
+			  "text":"你们"
+			}
+			,
+			{
+				"id":"4",
+			"iconId":"time",
+			  "text":"他们"
+			}
+		],
+		onSuccess: function(data) {
+			alert(JSON.stringify(data));
+
+		},
+		onFail: function(err) {
+			alert(JSON.stringify(err));
+		}
+	});
+}
+function setMenu11() {
+var getmenu = window.nuva.require('biz.navigation');
+
+	dd.biz.navigation.setMenu({
+		backgroundColor : "#ADD8E6",
+		items : [
+			// {
+			// 	id:"1",//字符串
+			// // "iconId":"file",//字符串，图标命名
+			//   text:"帮助"
+			// }
+			// ,
+			// {
+			// 	"id":"2",
+			// "iconId":"photo",
+			//   "text":"我们"
+			// }
+			// ,
+			// {
+			// 	"id":"3",
+			// "iconId":"file",
+			//   "text":"你们"
+			// }
+			// ,
+			// {
+			// 	"id":"4",
+			// "iconId":"time",
+			//   "text":"他们"
+			// }
+		],
+		onSuccess: function(data) {
+			alert(JSON.stringify(data));
+
+		},
+		onFail: function(err) {
+			alert(JSON.stringify(err));
+		}
+	});
+}
+
+function warn(){
+	var getmenu = window.nuva.require('biz.util');
+		getmenu.warn({
+			message: {
+				111 : 1,
+				222 : "ddew"
+			},
+		     onSuccess: function(data) {
+		        log.i('warn');
+		    },
+		    onFail: function(err) {
+		        log.e(JSON.stringify(err));
+		    }
+		});
+}
+
+function setLeft(){
+
+var getmenu = window.nuva.require('biz.navigation');
+
+        getmenu.setRight({
+        show: true,
+    	control: false,
+    	showIcon: true,
+    	text: '',            
+    	onSuccess: function(data) {
+                log.i('set title 3');
+            },
+         onFail: function(err) {
+                log.e(JSON.stringify(err));
+            }
+
+
+});
+
+
+var getmenu = window.nuva.require('device.notification');
+        getmenu.toast({
+    icon: '', //icon样式，有success和error，默认为空 0.0.2
+    text: "String", //提示信息
+    duration: 2, //显示持续时间，单位秒，默认按系统规范[android只有两种(<=2s >2s)]
+    delay: 0, //延迟显示，单位秒，默认0
+    onSuccess : function(result) {
+        /*{}*/
+    },
+    onFail : function(err) {}
+});
+}
+function setRight(){
+
+var getmenu = window.nuva.require('biz.navigation');
+
+        getmenu.setRight({
+        show: true,
+    	control: false,
+    	showIcon: true,
+    	text: 'haha',            
+    	onSuccess: function(data) {
+                log.i('set title 3');
+            },
+         onFail: function(err) {
+                log.e(JSON.stringify(err));
+            }
+
+
+});
+}
+
+function setMenu1() {
+var getmenu = window.nuva.require('biz.navigation');
+        dd.biz.navigation.setTitle({
+            title: 'runtime3',
+            onSuccess: function(data) {
+                log.i('set title 3');
+            },
+            onFail: function(err) {
+                log.e(JSON.stringify(err));
+            }
+        });
+
+	// dd.biz.navigation.setRight({
+	// 	 show: true,//控制按钮显示， true 显示， false 隐藏， 默认true
+ //    	control: true,//是否控制点击事件，true 控制，false 不控制， 默认false
+ //    	text: '发送',//控制显示文本，空字符串表示显示默认文本          
+		
+	// 	onSuccess: function(data) {
+	// 		alert(JSON.stringify(data));
+
+	// 	},
+	// 	onFail: function(err) {
+	// 		alert(JSON.stringify(err));
+	// 	}
+	// });
+
+}
+function setIcon(){
+
+	dd.biz.navigation.setIcon({
+    showIcon : true,//是否显示icon
+    iconIndex : 1,//显示的iconIndex,如图
+    onSuccess : function(result) {
+        /*结构
+        {
+        }*/
+        //点击icon之后将会回调这个函数
+    },
+    onFail : function(err) {
+    //jsapi调用失败将会回调此函数
+    }
+});
+}
+function setNoIcon(){
+	
+	dd.biz.navigation.setIcon({
+    showIcon : false,//是否显示icon
+    iconIndex : 1,//显示的iconIndex,如图
+    onSuccess : function(result) {
+        /*结构
+        {
+        }*/
+        //点击icon之后将会回调这个函数
+    },
+    onFail : function(err) {
+    //jsapi调用失败将会回调此函数
+    }
+});
+}
+
+var dataSave;
+function saveSpace(){
+	var saveSpace = window.nuva.require('biz.cspace');
+	saveSpace.saveFile({
+				corpId:"dingf8b3508f3073b265",
+				url:"http://download.taobaocdn.com/freedom/31112/pdf/p1a6htv7hq1o3p",
+				name:"我们",         
+				onSuccess: function(data) {
+					alert(JSON.stringify(data));
+					var var111 = eval(data);
+					dataSave = (var111.result.data)[0];
+					alert(JSON.stringify(dataSave));
+		            },
+	            onFail: function(err) {
+	                alert(JSON.stringify(err));
+	            }
+			});
+
+
+}
+function preview(){
+	var preview = window.nuva.require('biz.cspace');
+			preview.preview({
+				corpId:dataSave.corpId,
+				spaceId:dataSave.spaceId,
+				fileId:dataSave.fileId,
+				fileName:dataSave.fileName,
+				fileSize:dataSave.fileSize,
+				fileType:dataSave.fileType,
+				onSuccess: function(data) {
+					alert(JSON.stringify(data));
+		        },
+			    onFail: function(err) {
+			        alert(JSON.stringify(err));
+			    }
+
+			});
+	}
+
+function openLink(){
+	var open = window.nuva.require('biz.util');
+	open.openLink({
+		url:'http://h5.m.laiwang.com/home/ding.html',
+	    onSuccess : function(result) {
+	    	alert(JSON.stringify(result));
+	    },
+	    onFail : function(err) {
+	    	alert(JSON.stringify(err));
+	    }
+	});
+}
+
+function getUser(){
+	var var1 = window.nuva.require('biz.user');
+	var1.get({
+		onSuccess : function(result) {
+	    	alert(JSON.stringify(result));
+	    },
+	    onFail : function(err) {
+	    	alert(JSON.stringify(err));
+	    }
+	});
+}
+
+</script>
+<body>
+	<h1>It works!</h1>
+	<img src="	http://static.dingtalk.com/media/lADOBRFfk80B4M0BaA_360_480.jpg" alt="smile" />
+
+	<button onclick="setMenu()">setMenu接口1</button>
+	<input type="text" name="username" id="uname"></input>
+	<a href="./aa.html">跳转url</a> -->
+	<button onclick="getAlert(1)">complexChoose接口2</button>
+
+	<button onclick="warn()">warn</button>
+
+
+<!-- 	<form action="setMenu1()" method="get">
+  	<p>jsObject: <input type="text" name="fname" id="uname"/></p>
+  	<input type="submit" value="Submit" />
+	</form>
+
+ -->	<input type="text" name="username" id="uname"></input>
+	<button onclick="setMenu1()">执行</button>
+
+	<button onclick="setLeft()">setleft</button>
+	<button onclick="setRight()">setRight</button>
+
+	<button onclick="saveSpace()">saveSpace</button>
+	<button onclick="preview()">preview</button>
+
+	<button onclick="openLink()">JSAPI</button>
+
+	<button onclick="setIcon()">setIcon</button>
+	<button onclick="getUser()">getUser</button>
+	<button onclick="setMenu11()">setMenu11</button>
+
+<!-- 	<button onclick="getAlert(1)">complexChoose接口2</button>
+
+
+
+
+
+
+	<button onclick="getConfirm()">choose接口</button>
+	<button onclick="getPrompt()">getConversationInfoByCid接口</button>
+	<a href="tel:13146654710">TELaaaaaaaaaaaaaaa</a> -->
+</body>
+
+</html>
