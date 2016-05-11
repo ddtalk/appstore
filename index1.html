@@ -1,30 +1,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>钉钉demo</title> 
+<style>
+button{
+	width: 200px;
+	height: 60px;
+}
+</style>
+<title>我是人</title> 
 
 </head>
-<!-- <script type="text/javascript" src="./dingtalk.js"></script> -->
- <script src="http://g.alicdn.com/ilw/ding/0.6.8/scripts/dingtalk.js"></script>
-
-
-
+ <script src="http://g.alicdn.com/ilw/ding/0.9.2/scripts/dingtalk.js"></script>
 
 <script type="text/javascript"> 
+	document.title = "修改呀";
 
-  
-// dd.ready(
-// 	function() {
-        // dd.biz.navigation.setTitle({
-        //     title: 'runtime3',
-        //     onSuccess: function(data) {
-        //         log.i('set title 3');
-        //     },
-        //     onFail: function(err) {
-        //         log.e(JSON.stringify(err));
-        //     }
-        // });
-// });
+  dd.ready(setRight);
+  // alert("hahaah");
+
+  var  func = 1;
+
+
+  // for (var i = 1000000000; i >= 0; i--) {
+  // 	func++;
+  // };
 
 function getAlert(var1) {
 	alert("fefff34"); 
@@ -48,76 +47,7 @@ function getAlert(var1) {
     }
 	});
 
-
-	// dd.biz.navigation.setIcon(
-	// {
-	// 	showIcon :true,
-	// 	iconIndex : 1,
- //    onSuccess : function(data) {
- //    	alert(JSON.stringify(data));
- //    },
- //    onFail : function(err) {
- //    	    alert(JSON.stringify(err));
-
- //    }
-	// });
 }
-
-
-// 	aaa.getUUID({
-//     onSuccess : function(data) {
-//     	// alert(JSON.stringify(data));
-        
-//         {
-//             uuid: '3udbhg98ddlljokkkl' //
-//         }
-        
-//     },
-//     onFail : function(err) {}
-// });
-	// var getAlert = window.nuva.require('biz.contact');//请求获得这个类
-	// var a = var1%2;
-	// var1 = var1/2;
-
-	// var b = var1%2;
-	// var1 = var1/2;
-
-	// var c = var1%2;
-	// var1 = var1/2;
-
-	// var d = var1%2;
-	// var1 = var1/2;
-
-	// var e = var1%2;
-
-	// getAlert.complexChoose({//4个参数，16种情景
-	// 	startWithDepartmentId: (a == 0) ? -1 : 0, //-1表示从自己所在部门开始, 0表示从企业最上层开始，其他数字表示从该部门开始
-	// 	selectedUsers:(b == 0) ? [] : ["1913079016","32135433950"], //预选用户
-	// 	disabledUsers:(c == 0) ? [] : ["55692"],
-	// 	selectedDepartments:(d == 0) ? [] : [
-	// 			{
-	// 				id:"140010",
-	// 				name:"钉钉PMO",
-	// 				number:107
-	// 			}
-
-	// 	],//预选部门
-	// 	disabledDepartments:(e == 0) ? [] : [
-	// 			{
-	// 				id:"142004",
-	// 				name:"网吧行业部",
-	// 				number:6
-
-	// 			}
-	// 	],//禁选部门
-	// 	corpId:'dingea786bf7dcce0e0c', //企业id
-	// 	onSuccess: function(data) {
-	// 		alert(JSON.stringify(data));
-	// 	},
-	// 	onFail: function(err) {
-	// 		alert(JSON.stringify(err));
-	// 	}
-	// });//为这个函数传入参数
 
 
 function getConfirm() {
@@ -143,10 +73,6 @@ function getConfirm() {
 }
 
 dd.ready(function() {
-	// setMenu();
-
-	// alert('dd ready');
-	// alert(window.WebViewJavascriptBridgeAndroid);
 });
 
 //choose使用场景：1.审批选择审批人 2.签到查看他人签到。
@@ -185,18 +111,20 @@ function setMenu() {
 var getmenu = window.nuva.require('biz.navigation');
 
 	dd.biz.navigation.setMenu({
-		backgroundColor : "#ADD8E6",
+		// backgroundColor : "#ADD8E611",
+		// textColor : "#FFFFFF",
 		items : [
 			{
 				id:"1",//字符串
-			"iconId":"time",//字符串，图标命名
+			"iconId":"file",//字符串，图标命名
 			  text:"帮助"
 			}
 			,
 			{
 				"id":"2",
-			"iconId":"photo",
-			  "text":"我们"
+			// "iconId":"",
+			  "text":"我也不知道为什",
+			  "url":"https://img.alicdn.com/tps/TB1Ygo8LFXXXXcpXFXXXXXXXXXX-750-560.png"
 			}
 			,
 			{
@@ -207,7 +135,7 @@ var getmenu = window.nuva.require('biz.navigation');
 			,
 			{
 				"id":"4",
-			"iconId":"time",
+			  "iconId":"file",
 			  "text":"他们"
 			}
 		],
@@ -266,7 +194,7 @@ function warn(){
 			message: {
 				111 : 1,
 				"222" : "ddew",
-				"ddede" :"ewfefer"
+				"dwefefef":"ffrefrfrf"
 			},
 		     onSuccess: function(data) {
 		        log.i('warn');
@@ -282,10 +210,10 @@ function setLeft(){
 var getmenu = window.nuva.require('biz.navigation');
 
         getmenu.setRight({
-        show: true,
+        show: false,
     	control: false,
     	showIcon: true,
-    	text: '',            
+    	text: '和你',            
     	onSuccess: function(data) {
                 log.i('set title 3');
             },
@@ -310,14 +238,13 @@ var getmenu = window.nuva.require('device.notification');
 });
 }
 function setRight(){
-
+	setIcon();
 var getmenu = window.nuva.require('biz.navigation');
-
-        getmenu.setRight({
+   getmenu.setRight({
         show: true,
     	control: false,
     	showIcon: true,
-    	text: 'haha',            
+    	text: 'ha',            
     	onSuccess: function(data) {
                 log.i('set title 3');
             },
@@ -332,7 +259,7 @@ var getmenu = window.nuva.require('biz.navigation');
 function setMenu1() {
 var getmenu = window.nuva.require('biz.navigation');
         dd.biz.navigation.setTitle({
-            title: 'runtime3',
+            title: '我是',
             onSuccess: function(data) {
                 log.i('set title 3');
             },
@@ -340,21 +267,6 @@ var getmenu = window.nuva.require('biz.navigation');
                 log.e(JSON.stringify(err));
             }
         });
-
-	// dd.biz.navigation.setRight({
-	// 	 show: true,//控制按钮显示， true 显示， false 隐藏， 默认true
- //    	control: true,//是否控制点击事件，true 控制，false 不控制， 默认false
- //    	text: '发送',//控制显示文本，空字符串表示显示默认文本          
-		
-	// 	onSuccess: function(data) {
-	// 		alert(JSON.stringify(data));
-
-	// 	},
-	// 	onFail: function(err) {
-	// 		alert(JSON.stringify(err));
-	// 	}
-	// });
-
 }
 function setIcon(){
 
@@ -362,6 +274,8 @@ function setIcon(){
     showIcon : true,//是否显示icon
     iconIndex : 1,//显示的iconIndex,如图
     onSuccess : function(result) {
+    	// alert("icon");
+    	window.location = "./bb.html?dd_nav_bgcolor=FF5E97F6";
         /*结构
         {
         }*/
@@ -393,21 +307,19 @@ var dataSave;
 function saveSpace(){
 	var saveSpace = window.nuva.require('biz.cspace');
 	saveSpace.saveFile({
-				// corpId:"",
-				url:"https://ringnerippca.files.wordpress.com/2015/10/domain-nsposixerrordomain-code-2.pdf",
-				name:"我们",         
+				corpId:"dingf8b3508f3073b265",
+				url:"https://img.alicdn.com/tps/TB1WBR5MXXXXXb9XXXXXXXXXXXX-750-306.png",
+				name:"嘿嘿.png",         
 				onSuccess: function(data) {
 					alert(JSON.stringify(data));
 					var var111 = eval(data);
-					dataSave = (var111.result.data)[0];
+					dataSave = (var111.data)[0];
 					alert(JSON.stringify(dataSave));
 		            },
 	            onFail: function(err) {
 	                alert(JSON.stringify(err));
 	            }
 			});
-
-
 }
 function preview(){
 	var preview = window.nuva.require('biz.cspace');
@@ -440,6 +352,33 @@ function openLink(){
 	    }
 	});
 }
+function NfcRead(){
+		var nfc = window.nuva.require('device.nfc');
+nfc.nfcRead({
+	    onSuccess : function(result) {
+	    	alert(JSON.stringify(result));
+	    },
+	    onFail : function(err) {
+	    	alert(JSON.stringify(err));
+	    }
+
+});
+
+}
+function NfcWrite(){
+		var nfc = window.nuva.require('device.nfc');
+	nfc.nfcWrite({
+		content : "来吧，和我一起战斗吧！让这个悲哀的世界快乐起来！",
+	    onSuccess : function(result) {
+	    	alert(JSON.stringify(result));
+	    },
+	    onFail : function(err) {
+	    	alert(JSON.stringify(err));
+	    }
+});
+
+}
+
 
 function getUser(){
 	var var1 = window.nuva.require('biz.user');
@@ -452,15 +391,121 @@ function getUser(){
 	    }
 	});
 }
+function setTitlefrom(){
+	document.title = "";
+	alert(document.title);
+}
+
+function startRecord(){
+
+var var1 = window.nuva.require('device.audio');
+
+	var1.startRecord({
+		onSuccess : function(result) {
+	    	alert(JSON.stringify(result));
+	    },
+	    onFail : function(err) {
+	    	alert(JSON.stringify(err));
+	    }
+	});
+
+}
+
+var dataRecord;
+
+function stopRecord(){
+
+var var1 = window.nuva.require('device.audio');
+
+	var1.stopRecord({
+		onSuccess : function(data) {
+					alert(JSON.stringify(data));
+					var var111 = eval(data);
+					dataRecord = var111;		          
+	    },
+	    onFail : function(err) {
+	    	alert(JSON.stringify(err));
+	    }
+	});
+
+}
+
+function scan(){
+var var1 = window.nuva.require('biz.util');
+
+var1.scan({
+	"type":"qrCode",
+		onSuccess : function(data) {
+
+			var var111 = eval(data);
+			alert(var111.text);
+			location.href = var111.text;
+
+	    	// alert(JSON.stringify(result));
+	    },
+	    onFail : function(err) {
+	    	alert(JSON.stringify(err));
+	    }
+
+});
+
+}
+
+function translation(){
+	var var1 = window.nuva.require('device.audio');
+	var1.translateVoice({
+		mediaId: dataRecord.mediaId,
+        duration: 4981,
+        onSuccess: function (res) {
+            alert(res.mediaId);
+            alert(res.content);
+        },
+        onFail: function (err) {
+
+        }
+	});
+}
+
+
+function changeHash(){
+	document.title = "hashhaha";
+	location.hash="#"+i;
+}
+
+
+function pay(){
+	var var1 = window.nuva.require('biz.alipay');
+
+	var1.pay({
+    info: '_input_charset=\"UTF-8\"&body=电话_111\"&goods_type=\"1\"&notify_url=\"http://10.218.137.252/payway/appChargeAsynNotify.do\"&out_trade_no=\"201605053800020057\"&partner=\"2088101162882063\"&payment_type=\"1\"&seller_id=\"2088101162882063\"&service=\"mobile.securitypay.pay\"&sign=\"KIursa8paUecqqgZOFTJvu5HJbVVr7hM3mgjoh%2BSe5%2BDhEOSWWaGyTg8nKantjfTB3TrrV%2Fw8j1VWKBfakIXrR80aYZTe6aplsfHl%2FuXj9OfBceSPAFut0WBhq3ea6wW3rDjud9EdSpg2eTpHRucKI4AxZU5A%2BqPWkGBptdOpn0%3D\"&sign_type=\"RSA\"&subject=\"充值:电话_111,业务交易号:1000000223600090057\"&total_fee=\"44\"', // 订单信息，
+    onSuccess: function (result) {
+    	alert(JSON.stringify(result));
+        // {
+        //     memo: 'xxxx', // 保留参数，一般无内容
+        //     result: 'xxxx', // 本次操作返回的结果数据
+        //     resultStatus: '' // 本次操作的状态返回值，标识本次调用的结果
+        // }
+    },
+    onFail: function (err) {
+	    	alert(JSON.stringify(err));
+    }
+});
+
+}
 
 </script>
 <body>
+	<input type="file" name="_f" id="_f" /> 
+
 	<h1>It works!</h1>
 	<img src="	http://static.dingtalk.com/media/lADOBRFfk80B4M0BaA_360_480.jpg" alt="smile" />
 
 	<button onclick="setMenu()">setMenu接口1</button>
 	<input type="text" name="username" id="uname"></input>
-	<a href="./aa.html">跳转url</a> -->
+	<a href="./aa.html?dd_nav_bgcolor=FF5E97F6">跳转url</a> 
+<a href="./bb.html?dd_nav_bgcolor=FF5E97F6">跳转dao文档</a> -->
+
+
 	<button onclick="getAlert(1)">complexChoose接口2</button>
 
 	<button onclick="warn()">warn</button>
@@ -485,6 +530,37 @@ function getUser(){
 	<button onclick="setIcon()">setIcon</button>
 	<button onclick="getUser()">getUser</button>
 	<button onclick="setMenu11()">setMenu11</button>
+	<button onclick="setNoIcon()">setNOicon</button>
+	<button onclick="setTitlefrom()">setTitlefrom</button>
+	<button onclick="changeHash()">changeHash</button>
+
+	<button onclick="NfcRead()">NfcRead</button>
+	<button onclick="NfcWrite()">NfcWrite</button>
+
+	<button onclick="startRecord()">录音开始</button>
+	<button onclick="stopRecord()">录音结束</button>
+	<button onclick="scan()">扫码</button>
+
+	<button onclick="translation()">语音转文字</button>
+
+	<button onclick="pay()">zhifu</button>
+
+
+
+
+
+
+<input type="text" id="testId" onPropertyChange="showValue(this.value)" />
+<script>
+function dochg(){
+ document.getElementById("testId").value = "test"
+}
+setTimeout("dochg()",1000)
+function showValue(obj){
+ alert("changed value is " + obj);
+}
+</script>
+
 
 <!-- 	<button onclick="getAlert(1)">complexChoose接口2</button>
 
